@@ -7,7 +7,7 @@ public class Main {
         CalculadoraInicio Calculadora = new CalculadoraInicio();
         short escolhaUsuario;
             System.out.println("" +
-                    "### Calculadora ###" +
+                    "### Utilitarios ###" +
                     "(1) Calculadora Matemática" +
                     "(2) IMC" +
                     "(3) ???" +
