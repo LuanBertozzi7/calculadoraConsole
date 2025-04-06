@@ -1,24 +1,31 @@
 import java.util.Scanner;
+
+import calculadora.CalculadoraHistorico;
 import calculadora.CalculadoraInicio;
 import calculadora.Circuference;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         Circuference calcCircuAndMass = new Circuference();
         CalculadoraInicio Calculadora = new CalculadoraInicio();
         short escolhaUsuario;
+
             System.out.println("" +
                     "### Utilitarios ###" +
-                    "(1) Calculadora Matemática" +
-                    "(2) IMC" +
-                    "(3) ???" +
-                    "(4) ???");
+                    "\n(1) Calculadora Matemática" +
+                    "\n(2) IMC" +
+                    "\n(3) Circuferência");
             escolhaUsuario = scanner.nextShort();
+
             if(escolhaUsuario == 1){
                 CalculadoraInicio.calcIniciar(); // chamando a classe calcIniciar()
+                CalculadoraHistorico.salvarArquivoJson();
+
             } else if (escolhaUsuario == 2) {
-                System.out.println("imc n ta pronto n, Luan n quer trabalhar");
+                // IMC
+
             } else if (escolhaUsuario == 3) {
                 Circuference.circuIniciar();
             }
