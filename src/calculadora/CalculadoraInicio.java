@@ -8,6 +8,7 @@ public class CalculadoraInicio {
     public static void calcIniciar() {
         Scanner scanner = new Scanner(System.in);
 
+
         CalculadoraHistorico historico = new CalculadoraHistorico();
         
         String escolhaUsuarioOperacao;
