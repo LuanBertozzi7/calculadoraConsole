@@ -17,7 +17,6 @@ public class CalculadoraInicio {
         int segundoNumero;
 
         while(true){
-
             System.out.println("" +
                     "\nQual operação deseja? " +
                     "\n(+) Somar" +
@@ -28,13 +27,12 @@ public class CalculadoraInicio {
                     "\n(1) Histórico");
 
                 escolhaUsuarioOperacao = scanner.next();
-                if(escolhaUsuarioOperacao.equals("SAIR") && (escolhaUsuarioOperacao.equals("sair"))){
+                if(escolhaUsuarioOperacao.equals("SAIR")){
                     System.out.println("Saindo...");
                     break; // encerra o loop while
                 }
                 if(escolhaUsuarioOperacao.equals("1")){
                     System.out.println("#| Histórico |#");
-                    historico.mostrarHistorico();
                 }
             System.out.println("Escolha Dois Números:");
             System.out.println("Primeiro Número:");
@@ -46,24 +44,28 @@ public class CalculadoraInicio {
                 switch (escolhaUsuarioOperacao){
                     case "+":
                         resultado = primeiroNumero + segundoNumero;
-                        System.out.println("Resultado: " + primeiroNumero + " " + escolhaUsuarioOperacao + " " + segundoNumero + " = " + resultado);
                         break;
                     case "-":
                         resultado = primeiroNumero - segundoNumero;
-                        System.out.println("Resultado: " + primeiroNumero + " " + escolhaUsuarioOperacao + " " + segundoNumero + " = " + resultado);
                         break;
                     case "*":
                         resultado = primeiroNumero * segundoNumero;
-                        System.out.println("Resultado: " + primeiroNumero + " " + escolhaUsuarioOperacao + " " + segundoNumero + " = " + resultado);
                         break;
                     case "/":
                         resultado = primeiroNumero / segundoNumero;
-                        System.out.println("Resultado: " + primeiroNumero + " " + escolhaUsuarioOperacao + " " + segundoNumero + " = " + resultado);
                         break;
                     default:
                         System.out.println("operação inválida...");
                 }
-                historico.adicionar(escolhaUsuarioOperacao, primeiroNumero, segundoNumero, resultado);
+
+
+                if(true){ // esse if sempre vai executar
+                    System.out.println("Resultado: " + primeiroNumero + " " + escolhaUsuarioOperacao + " " + segundoNumero + " = " + resultado);
+                    CalculadoraHistorico.adicionar(escolhaUsuarioOperacao, primeiroNumero, segundoNumero, resultado);
+                    CalculadoraHistorico.salvarJSON();
+                }
+
+
         }
     }
 }

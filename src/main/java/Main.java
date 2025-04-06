@@ -20,8 +20,8 @@ public class Main {
             escolhaUsuario = scanner.nextShort();
 
             if(escolhaUsuario == 1){
+                CalculadoraHistorico.salvarJSON();
                 CalculadoraInicio.calcIniciar(); // chamando a classe calcIniciar()
-                CalculadoraHistorico.salvarArquivoJson();
 
             } else if (escolhaUsuario == 2) {
                 // IMC
