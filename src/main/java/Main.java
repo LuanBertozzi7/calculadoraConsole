@@ -10,10 +10,10 @@ public class Main {
         short escolhaUsuario;
             System.out.println("" +
                     "### Utilitarios ###" +
-                    "(1) Calculadora Matemática" +
-                    "(2) IMC" +
-                    "(3) ???" +
-                    "(4) ???");
+                    "\n(1) Calculadora Matemática" +
+                    "\n(2) IMC" +
+                    "\n(3) Circuferência" +
+                    "\n(4) ???");
             escolhaUsuario = scanner.nextShort();
             if(escolhaUsuario == 1){
                 CalculadoraInicio.calcIniciar(); // chamando a classe calcIniciar()

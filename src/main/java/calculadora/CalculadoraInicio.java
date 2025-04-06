@@ -1,7 +1,6 @@
 package calculadora;
 
 import calculadora.CalculadoraHistorico;
-
 import java.util.Scanner;
 
 public class CalculadoraInicio {
